@@ -1,7 +1,7 @@
 package ba.unsa.etf.rpr;
 
 public class Supermarket {
-    Artikl proizvodi[] = new Artikl[];
+    Artikl proizvodi[] = new Artikl[1000];
     int ukupno = 0;
     public Artikl[] getArtikli() {
         return proizvodi;
@@ -20,9 +20,7 @@ public class Supermarket {
     }
 
     public void dodajArtikl(Artikl a) {
-        proizvodi[ukupno].setCijena(a.getCijena());
-        proizvodi[ukupno].setKod(a.getKod());
-        proizvodi[ukupno].setNaziv(a.getNaziv());
+        proizvodi[ukupno]=new Artikl(a.getNaziv(),a.getCijena(),a.getKod());
         ukupno++;
     }
 }

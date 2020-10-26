@@ -3,8 +3,8 @@ package ba.unsa.etf.rpr;
 public class Artikl {
     String naziv;
     String kod;
-    String cijena;
-
+    int cijena;
+    Artikl(String naziv,int cijena,String id){this.naziv=naziv; this.kod=id; this.cijena=cijena;}
     public void setNaziv(String naziv) {
         this.naziv = naziv;
     }
@@ -13,7 +13,7 @@ public class Artikl {
         this.kod = kod;
     }
 
-    public void setCijena(String cijena) {
+    public void setCijena(int cijena) {
         this.cijena = cijena;
     }
 
@@ -25,7 +25,7 @@ public class Artikl {
         return kod;
     }
 
-    public String getCijena() {
+    public int getCijena() {
         return cijena;
     }
 }
