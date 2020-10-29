@@ -15,11 +15,14 @@ public class Korpa {
     }
 
     public Artikl izbaciArtiklSaKodom(String kod) {
-        Artikl vrati=null;
+        Artikl vrati=null; //nekoliko puta sam ovo stavio
         for(int i=0; i<ukupno; i++){
-            if(popis[i].getKod()==kod)
-                vrati=popis[i];
-            //dodati izbacivanje i provjeriti zašto ne radi kako treba
+            if(popis[i].getKod()==kod) {
+                vrati = popis[i];
+                ukupno--;
+                for(int j=i; j<ukupno-1; j++)
+                    popis[j]=popis[j+1];
+            }
         }
         ukupno--;
         return vrati;

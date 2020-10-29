@@ -10,7 +10,7 @@ public class Supermarket {
     public Artikl izbaciArtiklSaKodom(String kod) {
         Artikl izbacit=null;
         for(int i = 0; i<ukupno; i++)
-            if(proizvodi[i].getKod()==kod){
+            if(proizvodi[i].getKod().equals(kod)){
                 izbacit=proizvodi[i];
                 ukupno--;
                 for(int j=i; j<ukupno-1; j++)
