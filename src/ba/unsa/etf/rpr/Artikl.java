@@ -21,9 +21,7 @@ public class Artikl {
         return naziv;
     }
 
-    public String getKod() {
-        return kod;
-    }
+    public String getKod() { return kod; }
 
     public int getCijena() {
         return cijena;
